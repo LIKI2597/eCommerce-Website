@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .category-carousel {
+  text-align: center;
+  background: #fff;
+  padding: 2rem 1rem;
+}
+
+.category-carousel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1E1E2F;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.category {
+  flex: 0 0 auto;
+  width: 160px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.category img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+}
+
+.category span {
+  font-size: 1rem;
+  color: #1E1E2F;
+}
+
+.category:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1E1E2F;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+.carousel-btn:hover {
+  color: #5DA3FA;
+}
+
+    </style>
+</head>
+<body>
+   
+    <section class="category-carousel">
+      <h2>What are you shopping for today?</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn left" onclick="moveCarousel(-1)">&#10094;</button>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="category"><img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRxO8oLUMPiM9WV9RZ4iBO9Japl6y9S1PnXud4G1u8orLDw5qnrGmKP-ZC8kPHrFxr-GDnEp4Z0NR9cQ7aoZSaVWo6aP9khN3rLEyoyN3hPr4W9HOVu-uRm" alt="Women"><span>Women</span></div>
+          <div class="category"><img src="https://www.shutterstock.com/shutterstock/photos/2414074297/display_1500/stock-photo-happy-man-text-messaging-on-mobile-phone-while-buying-in-a-shopping-mall-copy-space-2414074297.jpg" alt="Men"><span>Men</span></div>
+          <div class="category"><img src="https://via.placeholder.com/140" alt="Kids"><span>Kids</span></div>
+          <div class="category" id="shoes"><img src="https://via.placeholder.com/140" alt="Shoes"><span>Shoes</span></div>
+          <div class="category"><img src="https://via.placeholder.com/140" alt="Jewelry"><span>Jewelry</span></div>
+          <div class="category"><img src="https://via.placeholder.com/140" alt="Beauty"><span>Beauty</span></div>
+          <div class="category"><img src="https://via.placeholder.com/140" alt="Decor"><span>Decor</span></div>
+          <div class="category"><img src="https://via.placeholder.com/140" alt="Home"><span>Home</span></div>
+        </div>
+        <button class="carousel-btn right" onclick="moveCarousel(1)">&#10095;</button>
+      </div>
+    </section>
+    
+    
+    <script>
+        const track = document.getElementById('carouselTrack');
+const itemWidth = 380; 
+let currentIndex = 0;
+        function moveCarousel(direction) {
+  const totalItems = track.children.length;
+  const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+  const visibleItems = Math.floor(containerWidth / itemWidth);
+  const maxIndex = totalItems - visibleItems;
+
+  currentIndex += direction;
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+  const newTransform = -currentIndex * itemWidth;
+  track.style.transform = `translateX(${newTransform}px)`;
+}
+
+window.addEventListener("resize", () => moveCarousel(0)); 
+
+    </script>
+</body>
+</html>

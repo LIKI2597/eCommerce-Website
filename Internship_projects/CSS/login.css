@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(to right, #864141, #a5a5de);
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    background-size: 100% 800px;
+    /*background-image: url("https://wallup.net/wp-content/uploads/2015/12/245412-landscape-nature-sunrise-lake-trees-mountain-water-clouds-reflection.jpg");*/
+}
+#login-container {
+   background: linear-gradient(to right, #864141, #a5a5de);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    backdrop-filter: blur(10px);
+}
+#login-container h1 {
+    text-align: center;
+    color: #0d0d0d;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+button#sub-btn {
+    width: 50%;
+    padding: 10px;
+    background-color: #ed9741;
+    color: rgb(12, 12, 12);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button#sub-btn:hover {
+    background-color: #f5721a;
+}
+.Error{
+    color: red;
+    font-size: 0.8em;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../IMAGES/flat-ecommerce.avif" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <div id="login-page">
+        <div id="login-container">
+            <h1>Login</h1>
+            <form action="" id="login-form" novalidate>
+                <div class="form-group">
+                    <!-- <label for="username">Username</label> -->
+                    <input type="email"   id="mail" placeholder="Enter the mail..">
+                    <span class="Error" id="mailError"></span>
+                </div>
+                <div class="form-group">
+                    <!-- <label for="password">Password</label> -->
+                    <input type="text"  id="pass" placeholder="Enter the password...">
+                    <span class="Error" id="passError"></span>
+                </div>
+                <br>
+            <button type="submit" id="sub-btn">Login</button>
+            <br>
+            <span class="Error" id="loginError"></span>
+            </form>
+            <div id="form-footer">
+                Don't have account? <a href="signup.html">Signup</a>
+            </div>
+        </div>
+    </div>
+    <script src="../JAVASCRIPT/login.js"></script>
+        
+</body>
+</html>

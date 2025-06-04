@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+    <link rel="shortcut icon" href="../IMAGES/th.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/signup.css">
+</head>
+<body>
+    <div id="signup-container">
+        <h1>Sign-up</h1>
+        <form action="" id="signup-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter the username...">
+                <span class="Error" id="usernameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter the password...">
+                <span class="Error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="Cpassword">Confirm password</label>
+                <input type="password" name="Cpassword" id="Cpassword" placeholder="Confirm password...">
+                <span class="Error" id="CpasswordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="Mail">E-mail</label>
+                <input type="text" name="mail" id="mail" placeholder="Enter the Mail...">
+                <span  class="Error" id="mailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="date">DOB</label>
+                <input type="date" name="date" id="date">
+                <span class="Error" id="dateError"></span>
+            </div>
+            <div class="form-group">
+                <label for="num">Number</label>
+                <input type="number" name="number" id="num" placeholder="Enter the Number...">
+                <span class="Error" id="numError"></span>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="radio" name="gender" id="male" value="Male">Male
+                <input type="radio" name="gender" id="female" value="Female">Female
+                <input type="radio" name="gender" id="others" value="Others">Others
+                <span class="Error" id="genderError"></span>
+            </div>
+
+            <button type="submit" id="sub-btn">Signup</button>
+        </form>
+        <div id="form-footer">
+            Already have an account?<a href="login.html">Login</a>
+        </div>
+    </div>
+
+
+
+    <script src="../JAVASCRIPT/signup.js"></script>
+</body>
+</html>

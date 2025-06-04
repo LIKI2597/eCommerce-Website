@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home items</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/home.css">
+</head>
+<body>
+
+
+  <div class="navbar">
+    <div class="logo">Home items</div>
+    <div class="home"><a href="../HTML/home1.html">HOME</a></div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search for sneakers..." oninput="filterProducts()">
+    </div>
+    <a href="cart.html" class="cart-icon">🛒</a>
+  </div>
+
+    <button id="scrollToTopBtn" title="Go to top">⬆</button>
+     &#x2191;
+
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Feel the luxury</h1>
+      <p>Walk tall in sneakers by the leading designers.</p>
+      <button>Shop now</button>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="../IMAGES/shoes.webp" alt="">
+      <h3>HRX</h3>
+      <p>High-quality item perfect for everyday use.</p>
+      <p class="price">₹ 200</p>
+      <div class="buttons">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart" onclick="addToCart('HRX', 'High-quality item perfect for everyday use.',200)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../IMAGES/shoes.webp" alt="">
+      <h3>Product 2</h3>
+      <p>Stylish and modern design built for comfort.</p>
+      <p class="price">₹ 200</p>
+      <div class="buttons">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart" onclick="addToCart('Product 2', 'Stylish and modern design built for comfort.',200)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+         <img src="../IMAGES/shoes.webp" alt="">
+      <h3>Product 3</h3>
+      <p>Durable and long-lasting material guaranteed.</p>
+      <p class="price">₹ 300</p>
+      <div class="buttons">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart" onclick="addToCart('Product 3', 'Durable and long-lasting material guaranteed.',300)">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+     <img src="../IMAGES/shoes.webp" alt="">
+      <h3>Product 4</h3>
+      <p>Perfect gift for any occasion with premium packaging.</p>
+      <p class="price">₹ 400</p>
+      <div class="buttons">
+        <button class="btn btn-buy">Buy Now</button>
+        <button class="btn btn-cart" onclick="addToCart('Product 4', 'Perfect gift for any occasion with premium packaging.',400)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JAVASCRIPT/shoes.js"></script>
+</body>
+</html>
